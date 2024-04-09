@@ -1,0 +1,2 @@
+### Crea un formulario HTML que recolecte información del usuario y que luego lo procese en un script PHP para realizar la validación de los datos.
+Se procese a crear el archivo index.html para comunicarse al archivo ContactHandler.php que procederá con un mensaje de éxito si se aprobó las validaciones. 

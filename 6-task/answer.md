@@ -1,0 +1,2 @@
+### 6 Describe un proyecto en el que hayas trabajado recientemente utilizando PHP. 
+Recientemente, he trabajado en un proyecto que involucra la administración de datos utilizando Laravel, un framework de desarrollo de aplicaciones web en PHP. Este proyecto se centra en la gestión de registros de mascotas, incluyendo el almacenamiento de imágenes asociadas a cada mascota y la gestión de solicitudes de registro.

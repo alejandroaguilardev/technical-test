@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.task-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+}
+
+.task-card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.task-card a:hover {
+    color: #ddb4d3;
+}

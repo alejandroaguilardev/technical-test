@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css"
+        integrity="sha512-1Nl4yEMt5aTvQ1fIbGKPO6ALqNNcIeuvDRq1n3yZkj+T4B5OSnmOBPHv+RqunTfV0w6LxhUhF0g2C5ZCU4l/ZA=="
+        crossorigin="anonymous" />
+
+    <title>Tareas 1</title>
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="task-card">
+                    <h4 class="card-title">Crea una clase en PHP para representar un objeto del mundo real y que
+                        demuestre la encapsulación, la herencia y el polimorfismo.</h4>
+                    <p class="card-text">En el archivo <code>2-Task.php</code> definimos la clase Pet con los atributos
+                        protegidos <code>$name</code> y <code>$age</code>.</p>
+
+                    <h5>Encapsulación</h5>
+                    <p>Creamos los métodos <code>getName</code> y <code>getAge</code> para encapsular las propiedades.
+                        Esto garantiza que solo puedan ser accedidas y modificadas de acuerdo con las reglas definidas
+                        por la clase.</p>
+                    <pre><code >
+public function getName()
+{
+    return $this->name;
+}
+
+public function getAge()
+{
+    return $this->age; 
+}
+                    </code></pre>
+
+                    <h5>Herencia</h5>
+                    <p>Definimos la Subclase Dog en la línea 32 <code>class Dog extends Pet</code> y heredamos los
+                        métodos <code>getName()</code>, <code>getAge()</code> y <code>makeSound()</code> de la clase
+                        Dog.</p>
+
+                    <h5>Polimorfismo</h5>
+                    <p>Crearemos un método polimórfico que sobrescribe el método <code>makeSound</code> de la clase
+                        padre llamado <code>makeSound()</code>. Este retornará otro texto al momento de ser invocado.
+                    </p>
+
+                    <pre><code>
+                        class Pet
+                        {
+                            protected $name;
+                            protected $age;
+                        
+                            public function __construct($name, $age)
+                            {
+                                $this->name = $name;
+                                $this->age = $age;
+                            }
+                        
+                            public function getName()
+                            {
+                                return $this->name;
+                            }
+                        
+                            public function getAge()
+                            {
+                                return $this->age;
+                            }
+                        
+                            public function makeSound()
+                            {
+                                return "Haciendo algún sonido genérico...";
+                            }
+                        }
+                        
+                        class Dog extends Pet
+                        {
+                            protected $breed;
+                        
+                            public function __construct($name, $age, $breed)
+                            {
+                                parent::__construct($name, $age);
+                                $this->breed = $breed;
+                            }
+                        
+                            public function makeSound()
+                            {
+                                return "¡Guau guau!";
+                            }
+                        
+                            public function getBreed()
+                            {
+                                return $this->breed;
+                            }
+                        }
+                        
+                        $pet = new Pet("Mascota", 5);
+                        echo "Nombre de la mascota: " . $pet->getName();
+                        echo "Edad de la mascota: " . $pet->getAge();
+                        echo "Sonido de la mascota: " . $pet->makeSound();
+                        
+                        $dog = new Dog("Baldo", 3, "Mestizo");
+                        echo "Nombre del perro: " . $dog->getName();
+                        echo "Edad del perro: " . $dog->getAge();
+                        echo "Raza del perro: " . $dog->getBreed();
+                        echo "Sonido del perro: " . $dog->makeSound();
+                        ?>
+                        </code></pre>
+
+                    <a href="../">
+                        <button class="btn btn-primary mx-auto">
+                            Volver a Inicio
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
